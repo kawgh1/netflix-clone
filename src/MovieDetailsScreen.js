@@ -5,7 +5,7 @@ import Nav from "./Nav";
 import Row from "./Row";
 import requests from "./Requests";
 
-function HomeScreen() {
+function MovieDetailsScreen() {
     return (
         <div className="homeScreen">
             {/* Nav */}
@@ -44,4 +44,4 @@ function HomeScreen() {
     );
 }
 
-export default HomeScreen;
+export default MovieDetailsScreen;

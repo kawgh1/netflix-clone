@@ -6,7 +6,7 @@ import "./Banner.css";
 function Banner() {
     function truncate(string, numChars) {
         return string?.length > numChars
-            ? string.substring(0, numChars - 1) + ". . ."
+            ? string.substring(0, numChars - 1) + "..."
             : string;
     }
 
@@ -15,7 +15,7 @@ function Banner() {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(requests.fetchNetflixOriginals);
+            const request = await axios.get(requests.fetchTopRated);
             setMovie(
                 request.data.results[
                     Math.floor(Math.random() * request.data.results.length - 1)
@@ -31,30 +31,20 @@ function Banner() {
         <header
             className="banner"
             style={{
-                backgroundImage: `url("https://i.imgur.com/e1hLQ2m.png")`,
-                backgroundSize: "cover",
-                backgroundPosition: "center center",
+                backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+                backgroundPosition: "top center",
             }}
         >
             <div className="banner__contents">
-                <h1 className="banner__title">Movie Name</h1>
+                <h1 className="banner__title">
+                    {movie.title || movie?.name || movie?.original_name}
+                </h1>
                 <div className="banner__buttons">
                     <button className="banner__button">Play</button>
                     <button className="banner__button">My List</button>
                 </div>
                 <h1 className="banner__description">
-                    {truncate(
-                        `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsum error praesentium quam reprehenderit, doloribus
-                    aperiam facilis consequatur minima eligendi, cumque natus!
-                    Obcaecati vero praesentium commodi ea dicta, blanditiis
-                    ducimus quis. Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Exercitationem expedita delectus
-                    explicabo, harum accusamus necessitatibus optio? Distinctio,
-                    consequatur facilis. Ullam cupiditate doloribus ducimus
-                    facilis nobis quisquam possimus maxime! Libero, pariatur?`,
-                        150
-                    )}
+                    {truncate(movie?.overview, 200)}
                 </h1>
             </div>
             <div className="banner--fadeBottom" />
