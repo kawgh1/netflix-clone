@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+.loginScreen {
+    position: relative;
+    height: 100%;
+    background: url("netflix-login-background.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.loginScreen__gradient {
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.81) 0%,
+        rgba(0, 0, 0, 0.91) 30%,
+        rgba(250, 250, 250, 0.5) 50%,
+        rgba(0, 0, 0, 0.91) 70%,
+        rgba(0, 0, 0, 0.81) 100%
+    );
+}
+.loginScreen__body {
+    position: absolute;
+
+    top: 34%;
+    margin: 0 auto;
+    z-index: 1;
+    color: white;
+    padding: 20px;
+    /* centering */
+    left: 0;
+    right: 0;
+}
+
+.loginScreen__body > h1 {
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.loginScreen__body > h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.loginScreen__body > h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.loginScreen__logo {
+    position: fixed;
+    left: 0;
+    width: 150px;
+    object-fit: contain;
+    padding-left: 20px;
+}
+
+.loginScreen__button {
+    position: fixed;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.5px;
+    right: 20px;
+    top: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: white;
+    /* NETFLIX RED */
+    background-color: #e50914;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 1px;
+}
+.loginScreen__input > form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 280px;
+}
+.loginScreen__input > form > input {
+    padding: 5px;
+    outline: none;
+    height: 30px;
+    width: 30%;
+    border: none;
+    max-width: 600px;
+    min-width: 130px;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+}
+.loginScreen__input {
+    margin: 20px auto;
+}
+
+.loginScreen__getStarted {
+    padding: 10px 10px;
+    font-weight: 500;
+    height: 40px;
+    font-size: 1rem;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    color: white;
+    background-color: #e50914;
+    border: none;
+    cursor: pointer;
+}
+
+/* media queries */
+@media screen and (max-width: 800px) {
+    .loginScreen__body {
+        top: 34%;
+    }
+
+    .loginScreen__body > h1 {
+        font-size: 2.1rem;
+    }
+
+    .loginScreen__body > h2 {
+        font-size: 1.2rem;
+    }
+
+    .loginScreen__body > h3 {
+        font-size: 0.9rem;
+    }
+    .loginScreen__getStarted {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+}
+
+/* media queries */
+@media screen and (max-width: 500px) {
+    .loginScreen__logo {
+        padding-left: 10px;
+    }
+
+    .loginScreen__button {
+        right: 23px;
+        top: 23px;
+    }
+    .loginScreen__gradient {
+        width: 100%;
+        z-index: 1;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.91) 0%,
+            rgba(0, 0, 0, 0.96) 25%,
+            rgba(200, 200, 200, 0.4) 50%,
+            rgba(0, 0, 0, 0.96) 75%,
+            rgba(0, 0, 0, 0.91) 100%
+        );
+    }
+    .loginScreen__body {
+        top: 32%;
+    }
+    .loginScreen__body > h1 {
+        font-size: 1.4rem;
+    }
+
+    .loginScreen__body > h2 {
+        font-size: 0.9rem;
+    }
+
+    .loginScreen__body > h3 {
+        font-size: 0.7rem;
+    }
+
+    .loginScreen__getStarted {
+        font-size: 0.85rem;
+    }
+}

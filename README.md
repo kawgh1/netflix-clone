@@ -12,6 +12,9 @@
 
 -   BEM Naming convention
 
+-   React Router
+-   **npm install react-router-dom**
+
 -   TMDB movie database API - https://www.themoviedb.org/?language=en-US - Example JSON object for a movie
     Object {
     backdrop_path: "/3tfgZt36SQ1FdbEV0YCLdzpkRn3.jpg",
@@ -45,3 +48,4 @@
 
 -   Movie Details Page
 -   Custom text-shadow for readability on diverse background movie images
+-   Custom gradient on Login Screen

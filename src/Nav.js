@@ -31,7 +31,7 @@ function Nav() {
                     className="nav__avatar"
                     src="/assets/images/netflix_avatar.png"
                     alt="Avatar"
-                    style={{ borderRadius: "2px" }}
+                    style={{ borderRadius: "1px" }}
                 />
             </div>
         </div>
