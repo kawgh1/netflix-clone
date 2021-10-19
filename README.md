@@ -1,4 +1,12 @@
+-   live site [here](https://netflix-clone-ec4be.web.app)
+
 **npx create-react-app netflix-clone --template redux**
+
+-   firebase init
+-   firebase out folder -> build
+-   firebase configure as Single Page App -> Yes
+-   npm run build
+-   firebase deploy
 
 ## Tools Used
 

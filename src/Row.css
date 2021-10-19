@@ -4,6 +4,10 @@
     margin-top: 20px;
 }
 
+.title {
+    margin-left: 20px;
+}
+
 .row__posters {
     display: flex;
     overflow-y: hidden;
@@ -21,9 +25,9 @@
 }
 
 .row__poster {
-    max-height: 125px;
-    min-height: 100px;
-    min-width: 60px;
+    max-height: 250px;
+    min-height: 200px;
+    min-width: 125px;
     object-fit: contain;
     margin-right: 10px;
     width: 100%;
@@ -49,4 +53,16 @@
 .row__posterLarge:focus {
     transform: scale(1.09);
     opacity: 1;
+}
+
+/* media queries */
+@media screen and (max-width: 500px) {
+    .row__posters {
+        padding-left: 0px;
+        margin-left: 10px;
+    }
+
+    .title {
+        margin-left: 10px;
+    }
 }
