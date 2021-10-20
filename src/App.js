@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
 import HomeScreen from "./screens/HomeScreen";
-import MovieDetailsScreen from "./screens/MovieDetailsScreen";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginScreen from "./screens/LoginScreen";
 
 function App() {
-    const user = null;
+    const user = 5;
     return (
         <div className="app">
             {/* <h1>Lets build Netflix</h1> */}
@@ -14,15 +13,11 @@ function App() {
             {/* <MovieDetailsScreen /> */}
 
             <Router>
-                {!user ? (
-                    <LoginScreen />
-                ) : (
-                    <Switch>
-                        <Route exact path="/">
-                            <HomeScreen />
-                        </Route>
-                    </Switch>
-                )}
+                <Switch>
+                    <Route exact path="/">
+                        <HomeScreen />
+                    </Route>
+                </Switch>
             </Router>
         </div>
     );

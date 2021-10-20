@@ -1,4 +1,5 @@
 -   live site [here](https://netflix-clone-ec4be.web.app)
+-   This is version 1 to get my feet wet
 
 **npx create-react-app netflix-clone --template redux**
 
@@ -39,13 +40,3 @@
     poster_path: "/k3HCQALcUyxebVZcfy57BIDYXUz.jpg",
     vote_average: 8.1,
     vote_count: 14,
-
-## Features
-
--   Disappearing/ Fading Navbar on scroll
-
-## Things I added
-
--   Movie Details Page
--   Custom text-shadow for readability on diverse background movie images
--   Custom gradient on Login Screen
