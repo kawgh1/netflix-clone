@@ -133,6 +133,11 @@
 
 }
 
+.display-none {
+    display: none;
+}
+
+
 
 
 /* media queries */

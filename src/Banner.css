@@ -8,6 +8,7 @@
 
 .banner__contents {
     margin-left: 30px;
+    margin-right: 25px;
     padding-top: 140px;
     height: 190px;
 }
@@ -42,6 +43,9 @@
     );
 }
 
+.display-none {
+    display: none;
+}
 .banner__button {
     cursor: pointer;
     color: white;
@@ -64,6 +68,78 @@
     color: #000;
     background-color: whitesmoke;
     transition: all 0.2s;
+}
+
+.banner__button-play {
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 2px;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding-bottom: 0.5rem;
+    border: 1px solid #222;
+}
+
+.banner__button-stop {
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 2px;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    background-color: rgba(255, 0, 0, 0.9);
+    padding-bottom: 0.5rem;
+    border: 1px solid rgb(212, 35, 35);
+
+}
+
+.banner__button-play:hover {
+    color: white;
+    background-color: green;
+    transition: all 0.2s;
+}
+.banner__button:hover {
+    color: #000;
+    background-color: whitesmoke;
+    transition: all 0.2s;
+}
+
+.banner__button-stop:hover {
+    color: white;
+    background-color: #111;
+    border: 1px solid #222;
+    transition: all 0.2s;
+
+}
+
+.banner__youtube {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0);
+    max-width: 400px;
+    width: 100%;
+    height: 300px;
+    border-radius: 3px;
 }
 
 /* media queries */

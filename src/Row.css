@@ -29,6 +29,7 @@
     min-height: 200px;
     min-width: 125px;
     object-fit: contain;
+    cursor: pointer;
     margin-right: 10px;
     width: 100%;
     transition: transform 125ms;

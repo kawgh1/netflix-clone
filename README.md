@@ -1,5 +1,4 @@
 -   live site [here](https://netflix-clone-ec4be.web.app)
--   This is version 1 to get my feet wet
 
 **npx create-react-app netflix-clone --template redux**
 

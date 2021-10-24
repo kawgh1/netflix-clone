@@ -47,10 +47,15 @@ function MovieDetails({movie}) {
         
     };
 
+    // // hide movie details when user clicks 'close' button
+    // function hideDiv() {
+    //     document.getElementById('movieDetails').style.display = "none";
+    //   }
+
     // console.log(movie);
     return (
         <div
-            className="movieDetails"
+            className={"movieDetails"}
             style={{
                 backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
                 backgroundPosition: "center center",
@@ -76,6 +81,8 @@ function MovieDetails({movie}) {
                 
             </div>
             {trailerUrl && <YouTube videoId={trailerUrl} opts={opts}/>}
+        
+            
             {/* <div className="movieDetails--fadeBottom" /> */}
         </div>
     );
