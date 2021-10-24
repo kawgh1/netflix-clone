@@ -8,6 +8,12 @@
 -   npm run build
 -   firebase deploy
 
+## Things I added
+- Movie Details on click
+- Pull movie trailer from youtube where available
+- Mobile styling
+- Total re-design of navigation, sign in, sign up pages and authentication
+
 ## Tools Used
 
 -   BEM Naming convention

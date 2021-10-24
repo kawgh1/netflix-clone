@@ -67,7 +67,7 @@
 
 .loginScreen__button {
     position: fixed;
-    right: 15px;
+    right: 30px;
     top: 15px;
     width: 90px;
     cursor: pointer;
@@ -161,6 +161,10 @@
         right: 23px;
         top: 23px;
     } */
+    .loginScreen__button {
+
+        right: 15px;
+    }
     .loginScreen__gradient {
         width: 100%;
         z-index: 1;

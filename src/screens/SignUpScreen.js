@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "./SignUpScreen.css";
 import { auth } from "../firebase";
 
-function LogInScreen() {
+function SignUpScreen() {
 
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
@@ -39,6 +39,7 @@ function LogInScreen() {
   
     return (
         <div className="signupScreen">
+        <div className="signupScreen__gradient" />
         <form>
           <h1>Sign In</h1>
           <p className="signupScreen__demo">
@@ -62,4 +63,4 @@ function LogInScreen() {
     );
   }
 
-export default LogInScreen;
+export default SignUpScreen;
