@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "./SignUp.css";
+import "./SignIn.css";
 import { auth } from "../firebase";
 import {Link as ReactRouterLink, useHistory} from 'react-router-dom'
 
@@ -60,7 +60,7 @@ function SignIn() {
                                 <h4>
                                 <span className="signupScreen__gray">New to Netflix? </span>
                                     
-                                    <ReactRouterLink to='/logIn'><span className="logInScreen__link" >
+                                    <ReactRouterLink to='/signup' style={{textDecoration:'none'}}><span className="signupScreen__link" >
                                     Sign Up.
                                     </span> </ReactRouterLink>
                                 </h4>

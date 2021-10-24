@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./LogInScreen.css";
-import SignUpScreen from "./SignUpScreen";
+import SignUpScreen from "../SignUpScreen";
 import {Link as ReactRouterLink} from 'react-router-dom'
 
 function LogInScreen() {
