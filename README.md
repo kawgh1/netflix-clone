@@ -16,6 +16,9 @@
 -   React Router
 -   **npm install react-router-dom**
 
+-   React Youtube
+-   **npm install react-youtube**
+
 -   TMDB movie database API - https://www.themoviedb.org/?language=en-US - Example JSON object for a movie
     Object {
     backdrop_path: "/3tfgZt36SQ1FdbEV0YCLdzpkRn3.jpg",
