@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import {Link as ReactRouterLink} from 'react-router-dom'
 import "./Nav.css";
 
 function Nav() {
     const [show, handleShow] = useState(false);
+    const user = null;
 
     const transitionNavBar = () => {
         if (window.scrollY > 100) {
@@ -22,17 +24,20 @@ function Nav() {
     return (
         <div className={`nav ${show && "nav__black"}`}>
             <div className="nav__content">
-                <img
+            <ReactRouterLink to='/'><img
                     className="nav__logo"
                     src="/assets/images/netflix_logo.png"
                     alt="Netflix Logo"
-                />
-                <img
+                /> </ReactRouterLink>
+                {user ? <img
                     className="nav__avatar"
                     src="/assets/images/netflix_avatar.png"
                     alt="Avatar"
                     style={{ borderRadius: "1px" }}
-                />
+                /> : <ReactRouterLink to='/login'>
+                <button className="nav__button">Sign In</button>
+                 </ReactRouterLink>}
+                
             </div>
         </div>
     );

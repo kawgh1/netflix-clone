@@ -11,7 +11,7 @@ lastTwoYears.setFullYear(lastTwoYears.getFullYear() - 2);
 const formattedLastTwoYears = lastTwoYears.toISOString().split("T")[0];
 
 const requests = {
-    fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US&sort_by=vote_average.desc&include_video=true`,
+    fetchTrending: `/trending/movie/week?api_key=${API_KEY}&language=en-US&sort_by=vote_average.desc&include_video=true`,
     fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213&sort_by=vote_average.desc&include_video=true`,
     fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US&include_video=true&sort_by=popularity.desc`,
     fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28&include_video=true&sort_by=popularity.desc`,

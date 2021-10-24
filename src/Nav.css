@@ -25,7 +25,7 @@
     position: fixed;
     left: 0;
     top: 10px;
-    width: 80px;
+    width: 90px;
     cursor: pointer;
     object-fit: contain;
     padding-left: 20px;
@@ -33,7 +33,35 @@
 
 .nav__avatar {
     position: fixed;
-    right: 20px;
+    right: 40px;
     width: 30px;
     cursor: pointer;
+}
+
+.nav__button {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    width: 90px;
+    cursor: pointer;
+    /*  */
+    position: fixed;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: white;
+    /* NETFLIX RED */
+    background-color: #e50914;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+    border-radius: 2px;
+}
+
+.nav__button:hover,
+.nav__button:active {
+    background-color: #b1060e;
+    color: whitesmoke;
 }

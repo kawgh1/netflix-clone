@@ -63,22 +63,37 @@
     padding-left: 20px;
 }
 
+
+
 .loginScreen__button {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    width: 90px;
+    cursor: pointer;
+    /*  */
     position: fixed;
     font-family: "Roboto", sans-serif;
     letter-spacing: 0.5px;
-    right: 20px;
-    top: 20px;
     padding: 10px 15px;
     font-size: 1rem;
     color: white;
     /* NETFLIX RED */
     background-color: #e50914;
-    font-weight: 600;
+    font-weight: 500;
     border: none;
     cursor: pointer;
-    border-radius: 1px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+    border-radius: 2px;
 }
+
+.loginScreen__button:hover,
+.loginScreen__button:active {
+    background-color: #b1060e;
+    color: whitesmoke;
+}
+
+/*  */
 .loginScreen__input > form {
     display: flex;
     justify-content: center;
@@ -142,10 +157,10 @@
         padding-left: 10px;
     }
 
-    .loginScreen__button {
+    /* .loginScreen__button {
         right: 23px;
         top: 23px;
-    }
+    } */
     .loginScreen__gradient {
         width: 100%;
         z-index: 1;
