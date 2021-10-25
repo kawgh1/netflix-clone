@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import {Link as ReactRouterLink} from 'react-router-dom'
+import { selectUser } from "./features/userSlice";
 import "./Nav.css";
 
 function Nav() {
     const [show, handleShow] = useState(false);
-    const user = null;
+    const user = useSelector(selectUser);
 
     const transitionNavBar = () => {
         if (window.scrollY > 100) {
@@ -29,12 +31,12 @@ function Nav() {
                     src="/assets/images/netflix_logo.png"
                     alt="Netflix Logo"
                 /> </ReactRouterLink>
-                {user ? <img
+                {user ? <ReactRouterLink to='/profile'><img
                     className="nav__avatar"
                     src="/assets/images/netflix_avatar.png"
                     alt="Avatar"
                     style={{ borderRadius: "1px" }}
-                /> : <ReactRouterLink to='/login'>
+                /></ReactRouterLink> : <ReactRouterLink to='/login'>
                 <button className="nav__button">Sign In</button>
                  </ReactRouterLink>}
                 

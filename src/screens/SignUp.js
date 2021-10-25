@@ -1,13 +1,14 @@
 import React, { useRef } from "react";
 import "./SignUp.css";
 import { auth } from "../firebase";
-import {Link as ReactRouterLink} from 'react-router-dom'
+import {Link as ReactRouterLink, useHistory} from 'react-router-dom'
 
 function SignUp() {
 
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
     const nameRef = useRef(null);
+    const history = useHistory();
   
     const register = (e) => {
       e.preventDefault();
@@ -20,10 +21,20 @@ function SignUp() {
         .then((authUser) => {
           console.log(authUser);
         })
+        .then((authUser) => {
+          authUser?.updateProfile({
+          displayName: nameRef.current.value
+          });
+      })
+      .then(() => {
+        history.push('/login');
+    })
         .catch((error) => {
           alert(error.message);
         });
     };
+
+    
   
     return (
         <div className="signupScreen">

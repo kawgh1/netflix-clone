@@ -33,9 +33,10 @@
 
 .nav__avatar {
     position: fixed;
-    right: 40px;
+    right: 20px;
     width: 30px;
     cursor: pointer;
+    border-radius: 2px;
 }
 
 .nav__button {
