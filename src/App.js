@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import HomeScreen from "./screens/HomeScreen";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -14,12 +14,15 @@ function App() {
     // redux
     const dispatch = useDispatch();
 
+    const [name, setName] = useState('');
+
     // listen to user's logged in state
     useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged(userAuth => {
         if (userAuth) {
           // logged in
-          console.log("logged in user, ", userAuth.displayName);
+          // console.log("logged in user, ", userAuth.displayName);
+          setName(userAuth.displayName)
           // redux
           dispatch(login({
             uid: userAuth.uid,
@@ -56,7 +59,7 @@ function App() {
             </Route>
             <Route path="/profile">
                 {user ? (
-                  <Profile /> ) :
+                  <Profile name={name}/> ) :
                   (<HomeScreen/>)
                }
             </Route>

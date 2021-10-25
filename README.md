@@ -27,8 +27,10 @@
 - Stripe API
 
 - Firebase Stripe API Extension
+    - "Run Subscription Payments with Stripe"
     - Cloud functions to automate customer transactions, subscription options
     - Firebase security rules
+
 
         rules_version = '2';
         service cloud.firestore {
@@ -57,6 +59,39 @@
             }
         }
         }
+
+    - Configure Stripe Webhooks
+    - Demo
+    - https://youtu.be/AHYVxg-lJX4?t=2538
+    - on Stripe API under Developers -> WebHooks
+    - click 'Add Endpoint'
+    - Add these events
+    - Select the following events:
+
+        product.created
+        product.updated
+        product.deleted
+        price.created
+        price.updated
+        price.deleted
+        checkout.session.completed
+        customer.subscription.created
+        customer.subscription.updated
+        customer.subscription.deleted
+        tax_rate.created (optional)
+        tax_rate.updated (optional)
+
+    - update Stripe webhook secret in firebase Stripe extension
+    with secret from Stripe
+
+    Configure the Stripe customer portal
+    Set your custom branding in the settings.
+    Configure the Customer Portal settings.
+    Toggle on "Allow customers to update their payment methods".
+    Toggle on "Allow customers to update subscriptions".
+    Toggle on "Allow customers to cancel subscriptions".
+    Add the products and prices that you want to allow customer to switch between.
+    Set up the required business information and links.
 
 -   TMDB movie database API - https://www.themoviedb.org/?language=en-US - Example JSON object for a movie
     Object {

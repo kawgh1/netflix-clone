@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./SignUp.css";
 import { auth } from "../firebase";
 import {Link as ReactRouterLink, useHistory} from 'react-router-dom'
@@ -7,7 +7,7 @@ function SignUp() {
 
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
-    const nameRef = useRef(null);
+    const [name, setName] = useState('')
     const history = useHistory();
   
     const register = (e) => {
@@ -18,13 +18,11 @@ function SignUp() {
           emailRef.current.value,
           passwordRef.current.value
         )
-        .then((authUser) => {
-          console.log(authUser);
-        })
-        .then((authUser) => {
-          authUser?.updateProfile({
-          displayName: nameRef.current.value
-          });
+        // .then((authUser) => {
+        //   console.log(authUser);
+        // })
+      .then((result) => {
+        result.user.updateProfile({displayName: name })
       })
       .then(() => {
         history.push('/login');
@@ -56,7 +54,9 @@ function SignUp() {
                     <div className='signupScreen__body'>
                             <form>
                             <h1>Sign Up</h1>
-                            <input ref={nameRef} placeholder="Name" type="text" />
+                            <input onChange={({ target }) =>
+                                setName(target.value)
+                            } placeholder="Name" type="text" />
                             <input ref={emailRef} placeholder="Email" type="email" />
                             <input ref={passwordRef} placeholder="Password" type="password" />
                             <button type="submit" onClick={register}>
