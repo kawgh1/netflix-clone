@@ -24,6 +24,40 @@
 -   React Youtube
 -   **npm install react-youtube**
 
+- Stripe API
+
+- Firebase Stripe API Extension
+    - Cloud functions to automate customer transactions, subscription options
+    - Firebase security rules
+
+        rules_version = '2';
+        service cloud.firestore {
+        match /databases/{database}/documents {
+            match /customers/{uid} {
+            allow read: if request.auth.uid == uid;
+
+            match /checkout_sessions/{id} {
+                allow read, write: if request.auth.uid == uid;
+            }
+            match /subscriptions/{id} {
+                allow read: if request.auth.uid == uid;
+            }
+            }
+
+            match /products/{id} {
+            allow read: if true;
+
+            match /prices/{id} {
+                allow read: if true;
+            }
+            
+            match /tax_rates/{id} {
+                allow read: if true;
+            }
+            }
+        }
+        }
+
 -   TMDB movie database API - https://www.themoviedb.org/?language=en-US - Example JSON object for a movie
     Object {
     backdrop_path: "/3tfgZt36SQ1FdbEV0YCLdzpkRn3.jpg",
