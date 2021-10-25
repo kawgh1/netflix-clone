@@ -56,6 +56,11 @@
     border-radius: 2px;
     cursor: pointer;
   }
+
+  .profile__signOut:hover,
+  .profile__signOut:active {
+background-color: rgb(189, 22, 55);
+  }
   
   .profile__plans {
     margin-top: 20px;
@@ -82,6 +87,11 @@
   /* media queries */
 @media screen and (max-width: 540px) {
 
+    .profile {
+        padding-top: 100px;
+        padding-bottom: 150px;
+      }
+
     .profile__body {
         display: flex;
         flex-direction: column;
@@ -94,6 +104,10 @@
 
     .profile__details {
         margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
       
@@ -104,8 +118,9 @@
       .profile__signOut {
         padding: 10px 20px;
         font-size: 1rem;
-        margin-top: 5%;
+        margin-top: 25%;
         width: 100%;
+        max-width: 150px;
         color: #fff;
         background-color: #e50914;
         font-weight: 600;

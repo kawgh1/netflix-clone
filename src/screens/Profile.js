@@ -29,8 +29,9 @@ function Profile({name}) {
                     <h3>Plans</h3>
 
               <PlansScreen />
-                        <button className='profile__signOut' onClick={() => auth.signOut()}>Sign Out</button>
+                        
                     </div>
+                    <button className='profile__signOut' onClick={() => auth.signOut()}>Sign Out</button>
                 </div>
             </div>
         </div>

@@ -25,6 +25,7 @@
 -   **npm install react-youtube**
 
 - Stripe API
+- **npm install @stripe/stripe-js**
 
 - Firebase Stripe API Extension
     - "Run Subscription Payments with Stripe"

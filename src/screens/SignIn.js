@@ -49,7 +49,7 @@ function SignIn() {
                                 <h1>Sign In</h1>
                                 <p className="signupScreen__demo">
                                                 For demo purposes user can enter
-                                                username = "test@gmail.com" and password = "test123"
+                                                username = "test@test.com" and password = "test123"
                                             </p>
                                 <input ref={emailRef} placeholder="Email" type="email" />
                                 <input ref={passwordRef} placeholder="Password" type="password" />
