@@ -18,7 +18,7 @@ function SignIn() {
             passwordRef.current.value
           )
           .then((authUser) => {
-            console.log(authUser);
+            // console.log(authUser);
           })
           .then(() => {
             history.push('/');

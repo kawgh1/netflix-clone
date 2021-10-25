@@ -29,7 +29,7 @@ function App() {
           // logged out
           // if logged out, set global user back to null
           // redux
-          dispatch(logout);
+          dispatch(logout());
         }
       });
       // clean up
@@ -55,22 +55,26 @@ function App() {
               <HomeScreen />
             </Route>
             <Route path="/profile">
-              <Profile />
+                {user ? (
+                  <Profile /> ) :
+                  (<HomeScreen/>)
+               }
             </Route>
             <Route path="/login">
-            {user ? (
-          <HomeScreen />
-        ) : (
-              <SignIn />)}
+                {user ? (
+                  <HomeScreen />
+                  ) : (
+                  <SignIn />)
+                  }
             </Route>
             <Route path="/signup">
-            {user ? (
-          <HomeScreen />
-        ) : (
-              <SignUp />)}
+                {user ? (
+                  <HomeScreen />
+                    ) : (
+                    <SignUp />)
+                }
             </Route>
           </Switch>
-        )}
         
       </Router>
         </div>
